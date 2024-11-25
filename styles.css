@@ -1,0 +1,42 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    grid-gap: 5px; /* Space between grid cells */
+    width: 300px; /* Example width for the grid */
+    margin: auto;
+    background: lightgray;
+    padding: 10px;
+  }
+  
+  .cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border: 1px solid black;
+    height: 100px; /* Example height for each cell */
+  }
+  
+  .cell button {
+    width: 100%; /* Button takes full width of the parent */
+    height: 100%; /* Button takes full height of the parent */
+    border: none;
+    font-size: 18px;
+    background: lightblue;
+    cursor: pointer;
+    transition: background 0.5s;
+  }
+  
+  .cell button:hover {
+    background: lightcoral;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bottom-container {
+    margin: 15px;
+  }
