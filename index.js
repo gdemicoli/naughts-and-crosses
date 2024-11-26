@@ -87,17 +87,17 @@ const game = ( function() {
 
             if(gameBoard.getBoard()[cell] === ' ') {
 
-                e.target.textContent = game.getPlayerTurn().symbol;
-                gameBoard.getBoard()[cell] = game.getPlayerTurn().symbol;
-                game.getPlayerTurn().squaresClaimed.push(cell);
+                e.target.textContent = getPlayerTurn().symbol;
+                gameBoard.getBoard()[cell] = getPlayerTurn().symbol;
+                getPlayerTurn().squaresClaimed.push(cell);
 
-                if(game.hasWon()){
+                if(hasWon()){
                     gameBoard.freezeBoard()
                     console.log("finished")
                 }
 
                 else {
-                    game.newTurn()
+                    newTurn()
                 }
             }
 
@@ -109,15 +109,13 @@ const game = ( function() {
     newGameButton.addEventListener('click', () => {
         gameBoard.clearBoard();
         buttons.forEach(button => button.textContent = '');
-        game.resetPlayers();
-
-
+        resetPlayers();
      })
 
 
 
     
-      return{players, playerTurn, winningCombos, newTurn, getPlayerTurn, hasWon, resetPlayers}
+    //   return{players, playerTurn, winningCombos, newTurn, getPlayerTurn, hasWon, resetPlayers}
 }) ();
 
     
