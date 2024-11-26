@@ -68,7 +68,7 @@ const game = ( function() {
                 return true; // Exits the loop and the function
             }
         }
-        return false; // If no combo satisfies the condition
+        return false;
     };
 
     const resetPlayers = () => {
@@ -77,28 +77,12 @@ const game = ( function() {
         });
     };
     
-
-
-    
-      return{players, playerTurn, winningCombos, newTurn, getPlayerTurn, hasWon, resetPlayers}
-    }) ();
-
-    const clickHandler = (e) => {
-        const selectedCell = e.target
-        console.log(selectedCell)
-
-    }
-
-    console.log(gameBoard)
-
     const buttons = document.querySelectorAll(".cell-button")
 
-    console.log("Game board: " + gameBoard.getBoard())
-
-
-   
     buttons.forEach(button => {
         button.addEventListener('click', (e) => {
+
+
             const cell = Number(e.target.id)
 
             if(gameBoard.getBoard()[cell] === ' ') {
@@ -129,5 +113,18 @@ const game = ( function() {
 
 
      })
+
+
+
+    
+      return{players, playerTurn, winningCombos, newTurn, getPlayerTurn, hasWon, resetPlayers}
+}) ();
+
+    
+
+
+    
+
+    
 
     
